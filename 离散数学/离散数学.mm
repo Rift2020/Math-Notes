@@ -170,8 +170,13 @@
 <node TEXT="\latex R自反则t(R),s(R)也自反,\\R对称则r(R),t(R)也对称,\\R传递则r(R)也传递,\textcolor {red}{s(R)未必传递}\\有tsr(R)=t(s(r(R)))具备自反性对称性和传递性" ID="ID_1534288567" CREATED="1640836968643" MODIFIED="1640837301102"/>
 <node TEXT="实际上，容易想到t(R)右边最多计算到n次(考虑图连成一条链，这是最坏情况)" ID="ID_1350949367" CREATED="1640836174663" MODIFIED="1640836234732"/>
 <node TEXT="*t(R)的计算" ID="ID_1207690084" CREATED="1640836275641" MODIFIED="1640838595399">
-<node TEXT="\latex 1.我们依旧可以利用矩阵快速幂的思想\\令$X_0=R$\\repeat($\lceil\log_2 n\rceil$):$X_n=X_{n-1}+X_{n-1}^2$\\$t(R)=X_{\lceil\log_2 n\rceil}$\\复杂度为$O(n^3 \log n)$\\2.可能爆搜(记忆化)好一点,目测是$O(n(n+m))$" ID="ID_1697825177" CREATED="1640836285160" MODIFIED="1640836704343"/>
-<node TEXT="沃舍尔算法" ID="ID_1746802497" CREATED="1640961347241" MODIFIED="1640961353779"/>
+<node TEXT="\latex 1.按照朴素的算法是做n-1次矩阵乘法和逻辑或\\$O((n-1)n^3)=O(n^4)$\\不过我们可以利用矩阵快速幂的思想\\令$X_0=R$\\repeat($\lceil\log_2 n\rceil$):$X_n=X_{n-1}+X_{n-1}^2$\\$t(R)=X_{\lceil\log_2 n\rceil}$\\复杂度为$O(n^3 \log n)$\\2.也可以从每个点开始搜索，寻找可以到达哪些点$O(n(n+m))$" ID="ID_1697825177" CREATED="1640836285160" MODIFIED="1641045222618"/>
+<node TEXT="\latex 沃舍尔算法$O(n^3)$" ID="ID_1746802497" CREATED="1640961347241" MODIFIED="1641044899210">
+<node TEXT="沃舍尔和Floyd最短路非常相似" ID="ID_1528875238" CREATED="1641045253023" MODIFIED="1641045268307"/>
+</node>
+</node>
+<node TEXT="传递闭包与可达矩阵的关系" ID="ID_1430582019" CREATED="1641044974201" MODIFIED="1641045040636">
+<node TEXT="这两个非常接近，但要注意的是，可达矩阵主对角线必然全1，即所有点都可达自己，而传递闭包主对角线未必全1" ID="ID_833740380" CREATED="1641045041153" MODIFIED="1641045081845"/>
 </node>
 </node>
 </node>
@@ -310,9 +315,23 @@
 <node TEXT="\latex 可知：$弱连通\rightarrow单向连通\rightarrow强连通$" ID="ID_1615683399" CREATED="1640950026009" MODIFIED="1640950088846"/>
 </node>
 </node>
-<node TEXT="子图" ID="ID_756383298" CREATED="1640959459489" MODIFIED="1640959461793"/>
-<node TEXT="补图" ID="ID_959326760" CREATED="1640959462180" MODIFIED="1640959465394"/>
-<node TEXT="图的同构" ID="ID_624802345" CREATED="1640959465876" MODIFIED="1640959470290"/>
+<node TEXT="子图" ID="ID_756383298" CREATED="1640959459489" MODIFIED="1640959461793">
+<node TEXT="\latex 符合直觉的:\\设$G=(V,E),G&apos;=(V&apos;,E&apos;)$,若$V&apos;\subset V$且$E&apos;\subset E$\\则称G&apos;为G的子图，G为G&apos;母图,记$G&apos;\subset G$" ID="ID_1914396164" CREATED="1641045344240" MODIFIED="1641045584742"/>
+<node TEXT="真子图，生成子图，导出子图" ID="ID_1719547635" CREATED="1641045597287" MODIFIED="1641045630274">
+<node TEXT="\latex 1.若V&apos;或E&apos;有一个是真子集则为真子图\\2.若G&apos;是子图且V&apos;=V则为生成子图\\3.若G&apos;是子图,V&apos;是V的非空子集，\\且E&apos;中有且仅有两端点均在V&apos;中的边\\称V&apos;导出的导出子图,记G[V&apos;]\\相似的,若G&apos;是子图,E&apos;是E的非空子集，\\且V&apos;中有且仅有E&apos;中边关联的端点\\称E&apos;导出的导出子图,记$G[E&apos;]$" ID="ID_42750207" CREATED="1641045634926" MODIFIED="1641046099942"/>
+</node>
+</node>
+<node TEXT="完全图" ID="ID_941743273" CREATED="1641046249108" MODIFIED="1641046253032">
+<node TEXT="符合直觉的，对于无向图,每两个点之间都有一条边，对于有向图，每两个点u,v都有一条u-&gt;v的边也有一条v-&gt;u的边" ID="ID_1957302862" CREATED="1641046253541" MODIFIED="1641046344785"/>
+</node>
+<node TEXT="补图" ID="ID_959326760" CREATED="1640959462180" MODIFIED="1640959465394">
+<node TEXT="符合直觉的，简单来说，就是原图和补图的并是完全图" ID="ID_704963230" CREATED="1641046174725" MODIFIED="1641046351719"/>
+</node>
+<node TEXT="图的同构" ID="ID_624802345" CREATED="1640959465876" MODIFIED="1640959470290">
+<node TEXT="简单来说，如果可以将G1的顶点重新取名就可以让G1=G2，则称G1与G2同构" ID="ID_437183221" CREATED="1641046376700" MODIFIED="1641046430991">
+<node TEXT="很遗憾，这个问题是np问题" ID="ID_804410608" CREATED="1641046475157" MODIFIED="1641046579327"/>
+</node>
+</node>
 </node>
 <node TEXT="进一步的概念" ID="ID_811339672" CREATED="1640958701352" MODIFIED="1640959615988">
 <node TEXT="割点与桥" ID="ID_249588498" CREATED="1640959851711" MODIFIED="1640959857282"/>
@@ -339,11 +358,11 @@
 <node TEXT="最小生成树" ID="ID_74940527" CREATED="1640959743366" MODIFIED="1640959770130"/>
 <node TEXT="树应用" ID="ID_976980796" CREATED="1640959770367" MODIFIED="1640961813029">
 <node TEXT="哈夫曼树" ID="ID_1583484553" CREATED="1640959774935" MODIFIED="1640959779207"/>
-<node TEXT="博弈树" ID="ID_1417408728" CREATED="1640961814680" MODIFIED="1640961818958"/>
-<node TEXT="决策树" ID="ID_120454878" CREATED="1640961819312" MODIFIED="1640961822853"/>
+<node TEXT="*博弈树" ID="ID_1417408728" CREATED="1640961814680" MODIFIED="1641046617037"/>
+<node TEXT="*决策树" ID="ID_120454878" CREATED="1640961819312" MODIFIED="1641046621261"/>
 </node>
 <node TEXT="二元树" ID="ID_1622262291" CREATED="1640959792265" MODIFIED="1640959795266"/>
-<node TEXT="最近公共祖先(LCA)" ID="ID_1581772632" CREATED="1640959939210" MODIFIED="1640959952164"/>
+<node TEXT="*最近公共祖先(LCA)" ID="ID_1581772632" CREATED="1640959939210" MODIFIED="1641046609701"/>
 </node>
 </node>
 <node TEXT="群，环，域" POSITION="right" ID="ID_1073122458" CREATED="1640961028248" MODIFIED="1640961040267"/>
