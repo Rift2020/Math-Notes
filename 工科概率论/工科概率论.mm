@@ -3,7 +3,7 @@
 <node TEXT="工科概率论" FOLDED="false" ID="ID_1090958577" CREATED="1409300609620" MODIFIED="1640745046851">
 <font NAME="SansSerif" BOLD="true"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties" VALUE="ALL"/>
-<hook NAME="MapStyle" zoom="0.25">
+<hook NAME="MapStyle" zoom="0.365">
     <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" associatedTemplateLocation="template:/BuzanMap.mm" fit_to_viewport="false"/>
 
 <map_styles>
@@ -221,7 +221,7 @@
 <node TEXT="\latex 柏松分布{\textcolor{red}{(不易推导)}}" ID="ID_761549586" CREATED="1638796407838" MODIFIED="1639571990055">
 <node TEXT="\latex 设分布列为\[P\{X=k\}=\frac{\lambda^ke^{-\lambda}}{k!},k=0,1,2,...\]" ID="ID_1805471477" CREATED="1638796416101" MODIFIED="1638796629178">
 <node TEXT="意义:当二项分布的n很大，k很小时，柏松分布是对二项分布极好的近似" ID="ID_1794701755" CREATED="1638796638331" MODIFIED="1638796686351"/>
-<node TEXT="\latex \textcolor{red}{(不易推导)}期望:\[E(X)=\lambda\]" ID="ID_1981146686" CREATED="1639573979855" MODIFIED="1639574022049"/>
+<node TEXT="\latex \textcolor{red}{(不易推导)}期望:\[E(X)=D(x)=\lambda\]" ID="ID_1981146686" CREATED="1639573979855" MODIFIED="1641718558262"/>
 </node>
 </node>
 </node>
