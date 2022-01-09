@@ -92,56 +92,6 @@
 </hook>
 <hook NAME="AutomaticEdgeColor" COUNTER="19" RULE="ON_BRANCH_CREATION"/>
 <node TEXT="概率基本概念" POSITION="right" ID="ID_1454397442" CREATED="1638271943967" MODIFIED="1638271989459">
-<node TEXT="独立性" ID="ID_763887461" CREATED="1638419405462" MODIFIED="1638419409274">
-<node TEXT="定义" ID="ID_1209452020" CREATED="1638419411423" MODIFIED="1638419415899">
-<node TEXT="\latex P(A\cap B)=P(A)P(B)" ID="ID_1735161537" CREATED="1638419416220" MODIFIED="1638419440030"/>
-</node>
-<node TEXT="定理(显然)" ID="ID_1771890958" CREATED="1638423304115" MODIFIED="1638423476869">
-<node TEXT="\latex 若A,B互相独立，则有$P(B|A)=P(B)$" ID="ID_732521605" CREATED="1638423322706" MODIFIED="1638423373941">
-<node TEXT="形象化理解，A事件发生并不能给B事件带来新的信息" ID="ID_1946763696" CREATED="1638423428974" MODIFIED="1638423465457"/>
-</node>
-<node TEXT="\latex 将A或B分别换成$\overline{A}或\overline{B}$，它们仍然独立" ID="ID_1413894812" CREATED="1638424289762" MODIFIED="1638424380074"/>
-</node>
-<node TEXT="一组事件的独立性" ID="ID_1326259248" CREATED="1638423538006" MODIFIED="1638423548091">
-<node TEXT="\latex 对于n个事件$A_1,A_2,...,A_n$,若满足:\\\[ P(\cap_{i\in S}A_i)=\prod_{i\in S}P(A_i),S是\{1,2,3,...,n\}的任意一个子集\],\\则称为$A_1,A_2,...,A_n$相互独立" ID="ID_1955456744" CREATED="1638423549345" MODIFIED="1638424205449">
-<node TEXT="\latex 通俗来说，就是：n个事件中任意1个，2个...n个事件的交事件的概率，都等于各事件的概率之积\\所以显然的，事件两两独立并不能推出一组事件独立" ID="ID_245656378" CREATED="1638424206513" MODIFIED="1638424526209"/>
-</node>
-</node>
-<node TEXT="*条件独立" ID="ID_1660356506" CREATED="1638422949603" MODIFIED="1638422959680">
-<node TEXT="\latex $P(A\cap B|C)=P(A|C)P(B|C)$\\注意：A与B独立\textbf{不能推出}在条件C下A与B条件独立，\\ \textbf{反之亦然}" ID="ID_64311094" CREATED="1638423007297" MODIFIED="1638423260171"/>
-</node>
-</node>
-<node TEXT="条件概率" ID="ID_279511562" CREATED="1638277256058" MODIFIED="1638277265255">
-<node TEXT="&quot;当A已经发生时，B发生的概率&quot;" ID="ID_1165431137" CREATED="1638277280714" MODIFIED="1638277309885">
-<node TEXT="\latex 记为$P(B|A)$" ID="ID_891815744" CREATED="1638277331992" MODIFIED="1638277390204"/>
-</node>
-<node TEXT="定义" ID="ID_1642460717" CREATED="1638278597252" MODIFIED="1638278602526">
-<node TEXT="\latex \[P(B|A)=\frac{P(A\cap B)}{P(B)}\]" ID="ID_1818987782" CREATED="1638277432161" MODIFIED="1638278581215">
-<node TEXT="易证条件概率符合概率律三条公理" ID="ID_1864686827" CREATED="1638417416726" MODIFIED="1638417448441"/>
-</node>
-</node>
-<node TEXT="乘法规则" ID="ID_1314285633" CREATED="1638277885362" MODIFIED="1638277890856">
-<node TEXT="\latex $P(AB)=P(B|A)P(A)$\\\[推广:P(\cap_{i=1}^{n} A_i)\\=P(A_1)P(A_2|A_1)P(A_3|(A_1\cap A_2))...P(A_n|\cap_{i=1}^{n-1} Ai)\]" ID="ID_1310604892" CREATED="1638277891587" MODIFIED="1638278522151">
-<node TEXT="证明：用定义代入易得" ID="ID_1206170113" CREATED="1638278541315" MODIFIED="1638278632611"/>
-<node TEXT="形象化理解：A1A2A3...全部发生的概率就是A1发生乘A1发生后A2发生的可能乘...前面都发生后An发生的可能" ID="ID_1518849008" CREATED="1638278641258" MODIFIED="1638278748770">
-<node TEXT="乘法规则的序贯树形图" ID="ID_503232562" CREATED="1638417515996" MODIFIED="1640746360363">
-<hook URI="images/序贯树形图.png" SIZE="0.43699685" NAME="ExternalObject"/>
-</node>
-</node>
-</node>
-</node>
-<node TEXT="全概率定理" ID="ID_123185805" CREATED="1638278778417" MODIFIED="1638278785382">
-<node TEXT="内容" ID="ID_1936173042" CREATED="1638417816773" MODIFIED="1638417822303">
-<node TEXT="\latex 设事件$A_1,A_2,...,A_n$形成样本空间S的一个划分\\(任意实验结果都导致其中一个事件发生)，\\又假设对于任意的$A_i$,有$A_i&gt;0$,则:\\$P(B)=P(A_1\cap B)+...+P(A_n\cap B)$\\$=P(A_1)P(B|A_1)+..+P(A_n)P(B|A_n)$" ID="ID_1913750964" CREATED="1638417822956" MODIFIED="1638418186636"/>
-</node>
-</node>
-<node TEXT="贝叶斯准则" ID="ID_1751574583" CREATED="1638278785808" MODIFIED="1638278794001">
-<node TEXT="内容" ID="ID_531559607" CREATED="1638418538793" MODIFIED="1638418542279">
-<node TEXT="\latex 设事件$A_1,A_2,...,A_n$形成样本空间S的一个划分\\(任意实验结果都导致其中一个事件发生)，\\又假设对于任意的$A_i$,有$A_i&gt;0$,\\则对于任何事件B，若$P(B)&gt;0$则有:\\\[P(A_i|B)=\frac{P(A_i)P(B|A_i)}{P(B)}\]\\\[=\frac{P(A_i)P(B|A_i)}{P(A_1)P(B|A_1)+..+P(A_n)P(B|A_n)}\]\\($P(B)$用全概率代入)" ID="ID_524704167" CREATED="1638418546150" MODIFIED="1638418802632"/>
-</node>
-<node TEXT="*连续贝叶斯准则" ID="ID_1282586909" CREATED="1639400853004" MODIFIED="1639400861588"/>
-</node>
-</node>
 <node TEXT="概率模型" ID="ID_445919343" CREATED="1638277224276" MODIFIED="1638277230319">
 <node TEXT="定义" ID="ID_897642388" CREATED="1638273341616" MODIFIED="1638273348077">
 <node TEXT="随机试验(通俗):可重复，所有可能结果可明确，不能提前知道结果" ID="ID_558461534" CREATED="1638272974604" MODIFIED="1638273086718"/>
@@ -179,6 +129,56 @@
 </node>
 </node>
 <node TEXT="有时也可以用序贯树形图来形象化表示" ID="ID_1946542206" CREATED="1638277153523" MODIFIED="1638277187805"/>
+</node>
+</node>
+<node TEXT="条件概率" ID="ID_279511562" CREATED="1638277256058" MODIFIED="1638277265255">
+<node TEXT="&quot;当A已经发生时，B发生的概率&quot;" ID="ID_1165431137" CREATED="1638277280714" MODIFIED="1638277309885">
+<node TEXT="\latex 记为$P(B|A)$" ID="ID_891815744" CREATED="1638277331992" MODIFIED="1638277390204"/>
+</node>
+<node TEXT="定义" ID="ID_1642460717" CREATED="1638278597252" MODIFIED="1638278602526">
+<node TEXT="\latex \[P(B|A)=\frac{P(A\cap B)}{P(B)}\]" ID="ID_1818987782" CREATED="1638277432161" MODIFIED="1638278581215">
+<node TEXT="易证条件概率符合概率律三条公理" ID="ID_1864686827" CREATED="1638417416726" MODIFIED="1638417448441"/>
+</node>
+</node>
+<node TEXT="乘法规则" ID="ID_1314285633" CREATED="1638277885362" MODIFIED="1638277890856">
+<node TEXT="\latex $P(AB)=P(B|A)P(A)$\\\[推广:P(\cap_{i=1}^{n} A_i)\\=P(A_1)P(A_2|A_1)P(A_3|(A_1\cap A_2))...P(A_n|\cap_{i=1}^{n-1} Ai)\]" ID="ID_1310604892" CREATED="1638277891587" MODIFIED="1638278522151">
+<node TEXT="证明：用定义代入易得" ID="ID_1206170113" CREATED="1638278541315" MODIFIED="1638278632611"/>
+<node TEXT="形象化理解：A1A2A3...全部发生的概率就是A1发生乘A1发生后A2发生的可能乘...前面都发生后An发生的可能" ID="ID_1518849008" CREATED="1638278641258" MODIFIED="1638278748770">
+<node TEXT="乘法规则的序贯树形图" ID="ID_503232562" CREATED="1638417515996" MODIFIED="1640746360363">
+<hook URI="images/序贯树形图.png" SIZE="0.43699685" NAME="ExternalObject"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="全概率定理" ID="ID_123185805" CREATED="1638278778417" MODIFIED="1638278785382">
+<node TEXT="内容" ID="ID_1936173042" CREATED="1638417816773" MODIFIED="1638417822303">
+<node TEXT="\latex 设事件$A_1,A_2,...,A_n$形成样本空间S的一个划分\\(任意实验结果都导致其中一个事件发生)，\\又假设对于任意的$A_i$,有$A_i&gt;0$,则:\\$P(B)=P(A_1\cap B)+...+P(A_n\cap B)$\\$=P(A_1)P(B|A_1)+..+P(A_n)P(B|A_n)$" ID="ID_1913750964" CREATED="1638417822956" MODIFIED="1638418186636"/>
+</node>
+</node>
+<node TEXT="贝叶斯准则" ID="ID_1751574583" CREATED="1638278785808" MODIFIED="1638278794001">
+<node TEXT="内容" ID="ID_531559607" CREATED="1638418538793" MODIFIED="1638418542279">
+<node TEXT="\latex 设事件$A_1,A_2,...,A_n$形成样本空间S的一个划分\\(任意实验结果都导致其中一个事件发生)，\\又假设对于任意的$A_i$,有$A_i&gt;0$,\\则对于任何事件B，若$P(B)&gt;0$则有:\\\[P(A_i|B)=\frac{P(A_i)P(B|A_i)}{P(B)}\]\\\[=\frac{P(A_i)P(B|A_i)}{P(A_1)P(B|A_1)+..+P(A_n)P(B|A_n)}\]\\($P(B)$用全概率代入)" ID="ID_524704167" CREATED="1638418546150" MODIFIED="1638418802632"/>
+</node>
+<node TEXT="*连续贝叶斯准则" ID="ID_1282586909" CREATED="1639400853004" MODIFIED="1639400861588"/>
+</node>
+</node>
+<node TEXT="独立性" ID="ID_763887461" CREATED="1638419405462" MODIFIED="1638419409274">
+<node TEXT="定义" ID="ID_1209452020" CREATED="1638419411423" MODIFIED="1638419415899">
+<node TEXT="\latex P(A\cap B)=P(A)P(B)" ID="ID_1735161537" CREATED="1638419416220" MODIFIED="1638419440030"/>
+</node>
+<node TEXT="定理(显然)" ID="ID_1771890958" CREATED="1638423304115" MODIFIED="1638423476869">
+<node TEXT="\latex 若A,B互相独立，则有$P(B|A)=P(B)$" ID="ID_732521605" CREATED="1638423322706" MODIFIED="1638423373941">
+<node TEXT="形象化理解，A事件发生并不能给B事件带来新的信息" ID="ID_1946763696" CREATED="1638423428974" MODIFIED="1638423465457"/>
+</node>
+<node TEXT="\latex 将A或B分别换成$\overline{A}或\overline{B}$，它们仍然独立" ID="ID_1413894812" CREATED="1638424289762" MODIFIED="1638424380074"/>
+</node>
+<node TEXT="一组事件的独立性" ID="ID_1326259248" CREATED="1638423538006" MODIFIED="1638423548091">
+<node TEXT="\latex 对于n个事件$A_1,A_2,...,A_n$,若满足:\\\[ P(\cap_{i\in S}A_i)=\prod_{i\in S}P(A_i),S是\{1,2,3,...,n\}的任意一个子集\],\\则称为$A_1,A_2,...,A_n$相互独立" ID="ID_1955456744" CREATED="1638423549345" MODIFIED="1638424205449">
+<node TEXT="\latex 通俗来说，就是：n个事件中任意1个，2个...n个事件的交事件的概率，都等于各事件的概率之积\\所以显然的，事件两两独立并不能推出一组事件独立" ID="ID_245656378" CREATED="1638424206513" MODIFIED="1638424526209"/>
+</node>
+</node>
+<node TEXT="*条件独立" ID="ID_1660356506" CREATED="1638422949603" MODIFIED="1638422959680">
+<node TEXT="\latex $P(A\cap B|C)=P(A|C)P(B|C)$\\注意：A与B独立\textbf{不能推出}在条件C下A与B条件独立，\\ \textbf{反之亦然}" ID="ID_64311094" CREATED="1638423007297" MODIFIED="1638423260171"/>
 </node>
 </node>
 </node>
@@ -494,7 +494,7 @@
 </node>
 <node TEXT="中心极限定理" ID="ID_900391308" CREATED="1640676101624" MODIFIED="1640676111135">
 <node TEXT="独立同分布的中心极限定理" ID="ID_316489881" CREATED="1640677928095" MODIFIED="1640677940941">
-<node TEXT="\latex 设$X_1,X_2...$是独立同分布的随机变量序列,\\每一项的均值都为$\mu$,方差为$\sigma^2$,\\记\[Z_n=\frac{X_1+...+X_n-n\mu}{\sqrt n \sigma}\]\\则$Z_n$的极限分布函数为标准正态分布$\Phi(x)$\\$(\Phi(x)=\frac{1}{\sqrt{2\pi}\int_{-\infty}^x e^{-z^2/2}dz})$\\即 \[\lim_{n\rightarrow\infty}P(Z_n\leq x)=\Phi(x)\]" ID="ID_544591662" CREATED="1640676283298" MODIFIED="1640676808883">
+<node TEXT="\latex 设$X_1,X_2...$是独立同分布的随机变量序列,\\每一项的均值都为$\mu$,方差为$\sigma^2$,\\记\[Z_n=\frac{X_1+...+X_n-n\mu}{\sqrt n \sigma}\]\\则$Z_n$的极限分布函数为标准正态分布$\Phi(x)$\\$(\Phi(x)=\frac{1}{\sqrt {2\pi}} \int_{-\infty}^x e^{-z^2/2}dz)$\\即 \[\lim_{n\rightarrow\infty}P(Z_n\leq x)=\Phi(x)\]" ID="ID_544591662" CREATED="1640676283298" MODIFIED="1641695922122">
 <node TEXT="\latex 注意:$X_i$只需要是独立同分布即可，\\$X_i$可以是离散,连续,混合的" ID="ID_1578932862" CREATED="1640676836481" MODIFIED="1640676897217"/>
 <node TEXT="利用中心极限定理计算近似值" ID="ID_1079689013" CREATED="1640676907137" MODIFIED="1640677028628">
 <node TEXT="\latex 假若$S_n=X_1+...+X_n$且$X_i$独立同分布,\\均值都为$\mu$,方差为$\sigma^2$,当n充分大时,概率$P(S_n\leq c)$\\可以将$S_n$视为正态分布\\1.计算期望与方差$n\mu$,$n\sigma^2$\\2.计算归一化后的$z=(c-n\mu)/(\sqrt n \sigma)$3.利用$P(S_n\leq c)\approx\Phi(z)$计算近似值\\$\Phi(z)$可通过查询正态分布表" ID="ID_1751011862" CREATED="1640677052380" MODIFIED="1640677478746">
@@ -511,7 +511,7 @@
 </node>
 <node TEXT="埭莫弗-拉普拉斯定理(二项分布近似)" ID="ID_692817722" CREATED="1640677949967" MODIFIED="1640678032439">
 <node TEXT="\latex 设$S_n$是服从参数为n,p的二项分布,\\对于任意$x$,有:\\\[\lim_{n\rightarrow \infty}P(S_n\leq x)=\Phi(\frac{x-np}{\sqrt{np(1-p)}})\]" ID="ID_1477819286" CREATED="1640678285890" MODIFIED="1640680610112">
-<node TEXT="证明：利用上面的中心极限定理易证" ID="ID_1933386421" CREATED="1640680630938" MODIFIED="1640680648877"/>
+<node TEXT="证明：利用上面的中心极限定理易证(二项分布是Sn，里面的Xi是(0,1)分布)" ID="ID_1933386421" CREATED="1640680630938" MODIFIED="1641696414419"/>
 <node TEXT="*更好的近似(端点修正)" ID="ID_41768727" CREATED="1640680650161" MODIFIED="1640681998457">
 <node TEXT="\latex 考虑实际情况,n并不是正无穷时,我们要计算:\\$P(l \leq Sn\leq r),l,r非负整数$.\\我们本来要计算的是归一化后在正态分布在$[l,r]$的积分\\现在计算$[l-\frac 1 2,r+\frac 1 2]$上的积分使得结果更精确\\即\[P(l \leq Sn\leq r)\approx \Phi(\frac{r+\frac 1 2 -np}{\sqrt{np(1-p)}})-\Phi(\frac{l-\frac 1 2 -np}{\sqrt{np(1-p)}})\]\\注意:当l=r时，仍然可以用这个方法使得近似值更加精确" ID="ID_647444919" CREATED="1640680665251" MODIFIED="1640681530150">
 <node TEXT="为什么近似变得更好" ID="ID_1063089429" CREATED="1640681388769" MODIFIED="1640681406421">
