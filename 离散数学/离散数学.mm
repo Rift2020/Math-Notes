@@ -97,7 +97,7 @@
 <node TEXT="谓词" ID="ID_1763087472" CREATED="1641652287872" MODIFIED="1641652291775">
 <node TEXT="对于诸如&quot;x&gt;3&quot;,&quot;计算机x正在被攻击&quot;,当变量值未指定时，这些语句既不为真也不为假，我们可以用P(x)来表示&quot;x&gt;3&quot;,P是谓词&quot;x&gt;3&quot;而x则是变量。也可以把P(x)看做命题函数" ID="ID_1098417543" CREATED="1641653094032" MODIFIED="1641653304313"/>
 </node>
-<node TEXT="公式，解释" ID="ID_1467702465" CREATED="1641652827716" MODIFIED="1641652874055">
+<node TEXT="公式" ID="ID_1467702465" CREATED="1641652827716" MODIFIED="1641707085404">
 <node TEXT="符号" ID="ID_1978780942" CREATED="1641654101866" MODIFIED="1641654104586">
 <node TEXT="个体常项(常量)a,b,c" ID="ID_1655403455" CREATED="1641654106181" MODIFIED="1641654610579"/>
 <node TEXT="个体变项(变量)x,y,z" ID="ID_1985659611" CREATED="1641654143945" MODIFIED="1641654616918"/>
@@ -114,13 +114,69 @@
 <node TEXT="合式公式" ID="ID_561158895" CREATED="1641655036631" MODIFIED="1641655039932">
 <node TEXT="简而言之，有限次的将原子公式用量词修饰或者用联结词联结出来的都是合式公式，原子公式本身也是合式公式" ID="ID_1431304672" CREATED="1641655041001" MODIFIED="1641655119607"/>
 </node>
+<node TEXT="辖域" ID="ID_1513768699" CREATED="1641705085755" MODIFIED="1641705094833">
+<node TEXT="\latex 1.若量词后边紧跟着一个原子公式，则量词的辖域是这个原子公式2.若量词后边跟着括号，则其辖域是整个括号部分3.若有几个量词连在一起，那么量词的辖域就是第一个量词的辖域" ID="ID_317407208" CREATED="1641705094985" MODIFIED="1641705229261"/>
 </node>
-<node TEXT="自由变元与约束变元" ID="ID_102706209" CREATED="1641652393876" MODIFIED="1641652404976"/>
-<node TEXT="前束范式" ID="ID_635591445" CREATED="1641652459109" MODIFIED="1641652462539"/>
+<node TEXT="自由变元与约束变元" ID="ID_1366107200" CREATED="1641705234678" MODIFIED="1641705504352">
+<node TEXT="简单来说，出现在使用变元的量词的辖域里的就是约束变元，否则是自由变元" ID="ID_529630127" CREATED="1641705505824" MODIFIED="1641705689678">
+<node TEXT="比如" ID="ID_913306819" CREATED="1641705509960" MODIFIED="1641705624818">
+<hook URI="images/辖域与变元.png" SIZE="0.31770003" NAME="ExternalObject"/>
+</node>
+</node>
+<node TEXT="闭式" ID="ID_1803974433" CREATED="1641705773175" MODIFIED="1641705777553">
+<node TEXT="若一个公式里没出现自由变元，则称这个式子为闭式" ID="ID_565113198" CREATED="1641705718384" MODIFIED="1641705771007"/>
+</node>
+</node>
+<node TEXT="换名规则" ID="ID_1716883876" CREATED="1641705786061" MODIFIED="1641705880801">
+<node TEXT="简而言之就是把本质上指的是一个变元的用一个名字，不是一个变元的用另外一个名字" ID="ID_35573856" CREATED="1641705880973" MODIFIED="1641705935058">
+<node TEXT="约束变元改名" ID="ID_1975383938" CREATED="1641705954335" MODIFIED="1641705962573">
+<node TEXT="将量词的变元和辖域内此变元约束出现的个体都换一个符号，至少要与辖域内其他变元的符号不同" ID="ID_735968285" CREATED="1641705962903" MODIFIED="1641706056217"/>
+</node>
+<node TEXT="自由变元代入" ID="ID_861165243" CREATED="1641706062645" MODIFIED="1641706068737">
+<node TEXT="每个自由变元都用一个新符号去替换" ID="ID_1240320068" CREATED="1641706069507" MODIFIED="1641706102827"/>
+</node>
+</node>
+</node>
+<node TEXT="解释" ID="ID_1503619241" CREATED="1641706236258" MODIFIED="1641706239917">
+<node TEXT="其实就是指定&quot;定义域&quot;和&quot;赋值&quot;" ID="ID_1405969354" CREATED="1641706240213" MODIFIED="1641706269580">
+<node TEXT="给个体变项指定非空个体域D(&quot;定义域&quot;)，给个体常项指定一个D里的元素，函数和谓词都指定为D上的" ID="ID_1177937190" CREATED="1641706269993" MODIFIED="1641706414118"/>
+</node>
+<node TEXT="解释下求真值" ID="ID_462464592" CREATED="1641706428729" MODIFIED="1641706437720">
+<node TEXT="\latex 显然的，\\任意的得满足在D上都成立，因此枚举每种情况中间连接词是$\wedge$，\\类似的，&quot;存在&quot;，只要D中满足一种情况，枚举然后中间是$\vee$，\\一个解释下应该只有一个真值" ID="ID_1975123554" CREATED="1641706438541" MODIFIED="1641706675007"/>
+</node>
+</node>
+<node TEXT="永真式，永假式，可满足式" ID="ID_1606311074" CREATED="1641706737150" MODIFIED="1641706760153">
+<node TEXT="任何解释下都为真，任何解释下都为假，存在至少一种解释为真" ID="ID_989600843" CREATED="1641706760446" MODIFIED="1641706882112"/>
+<node TEXT="*谓词逻辑的可判定性" ID="ID_1994614217" CREATED="1641706961762" MODIFIED="1641706974471"/>
+</node>
+<node TEXT="公式等价" ID="ID_1947079696" CREATED="1641707074403" MODIFIED="1641707080347">
+<node TEXT="量词否定等价" ID="ID_534409003" CREATED="1641707128937" MODIFIED="1641707139345">
+<node TEXT="\latex $\neg\forall A(x)=\exists\neg A(x)$\\$\neg\exists A(x)=\forall\neg A(x)$" ID="ID_1007202629" CREATED="1641707139563" MODIFIED="1641707229218"/>
+</node>
+<node TEXT="辖域收缩与扩张" ID="ID_189419582" CREATED="1641707231668" MODIFIED="1641707242395">
+<node TEXT="只有3是相反的" ID="ID_803332296" CREATED="1641707242598" MODIFIED="1641707459575">
+<hook URI="images/量词扩张与收缩.jpg" SIZE="0.16178508" NAME="ExternalObject"/>
+</node>
+</node>
+<node TEXT="量词分配等值" ID="ID_71418220" CREATED="1641707463380" MODIFIED="1641707479167">
+<node TEXT="\latex 只有这两种，其他不成立\\$\forall((A(x)\wedge B(x)))=\forall A(x)\wedge \forall B(x)$\\$\exists (A(x)\vee B(x))=\exists A(x)\vee \exists B(x)$" ID="ID_220284597" CREATED="1641707479409" MODIFIED="1641707656366"/>
+</node>
+<node TEXT="多量词交换" ID="ID_1165560950" CREATED="1641707713794" MODIFIED="1641707727201">
+<node TEXT="\latex 符合语感的,只有同一种量词可以交换顺序\\$\forall x \forall y A(x,y)=\forall y \forall x A(x,y)$\\$\exists x \exists y A(x,y)=\exists y \exists x A(x,y)$" ID="ID_1679064436" CREATED="1641707727523" MODIFIED="1641707851574"/>
+</node>
+</node>
+<node TEXT="前束范式" ID="ID_1203416320" CREATED="1641708027699" MODIFIED="1641708044156">
+<node TEXT="通法步骤" ID="ID_330893443" CREATED="1641708236042" MODIFIED="1641708245379">
+<node TEXT="\latex 1.消去&quot;\rightarrow&quot;,&quot;\leftrightarrow&quot;\\2.把否定连接符&quot;$\neq$&quot;从量词部分内移到原子公式最前端，\\如$\neg \exists x G(x)=\forall x\neg G(x)$\\3.换名\\4.用谓词等价公式将所有量词提到公式最前端\\并保证其辖域直到公式最末端" ID="ID_1442744940" CREATED="1641708245591" MODIFIED="1641708570460"/>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="推理规则" ID="ID_1011272715" CREATED="1641652502781" MODIFIED="1641652506649">
+<node TEXT="命题逻辑推理" ID="ID_636910490" CREATED="1641707902522" MODIFIED="1641707908532">
 <node TEXT="重要推理规则" ID="ID_268781296" CREATED="1641653778354" MODIFIED="1641653937448">
 <hook URI="images/推理规则.jpg" SIZE="0.31725928" NAME="ExternalObject"/>
+</node>
 </node>
 <node TEXT="*量化命题推理" ID="ID_351979699" CREATED="1641653992402" MODIFIED="1641654001523"/>
 </node>
