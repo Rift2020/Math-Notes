@@ -3,7 +3,7 @@
 <node TEXT="工科概率论" FOLDED="false" ID="ID_1090958577" CREATED="1409300609620" MODIFIED="1640745046851">
 <font NAME="SansSerif" BOLD="true"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties" VALUE="ALL"/>
-<hook NAME="MapStyle" zoom="0.365">
+<hook NAME="MapStyle" zoom="1.042">
     <properties show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_note_icons="true" associatedTemplateLocation="template:/BuzanMap.mm" fit_to_viewport="false"/>
 
 <map_styles>
@@ -136,7 +136,7 @@
 <node TEXT="\latex 记为$P(B|A)$" ID="ID_891815744" CREATED="1638277331992" MODIFIED="1638277390204"/>
 </node>
 <node TEXT="定义" ID="ID_1642460717" CREATED="1638278597252" MODIFIED="1638278602526">
-<node TEXT="\latex \[P(B|A)=\frac{P(A\cap B)}{P(B)}\]" ID="ID_1818987782" CREATED="1638277432161" MODIFIED="1638278581215">
+<node TEXT="\latex \[P(B|A)=\frac{P(A\cap B)}{P(A)}\]" ID="ID_1818987782" CREATED="1638277432161" MODIFIED="1641724277655">
 <node TEXT="易证条件概率符合概率律三条公理" ID="ID_1864686827" CREATED="1638417416726" MODIFIED="1638417448441"/>
 </node>
 </node>
